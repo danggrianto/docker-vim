@@ -1,7 +1,7 @@
 FROM alpine:3.16
 
 RUN apk update
-RUN apk add neovim curl git zsh
+RUN apk add neovim curl git zsh fzf the_silver_searcher bat
 
 RUN mkdir -p ~/.config/nvim
 ADD nvim/init.vim /root/.config/nvim/init.vim
@@ -19,5 +19,5 @@ ENV TERM=screen-256color
 
 WORKDIR /app
 
-# ENTRYPOINT ["nvim"]
+ENTRYPOINT ["nvim"]
 
