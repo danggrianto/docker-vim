@@ -12,6 +12,9 @@ call plug#begin()
   " commenter https://github.com/tpope/vim-commentary
   Plug 'tpope/vim-commentary'
 
+  " CtrlP https://github.com/kien/ctrlp.vim 
+  Plug 'kien/ctrlp.vim'
+
 call plug#end()
 
 " CONFIGURATION
@@ -40,3 +43,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 " Spacecamp
 colorscheme spacecamp
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
