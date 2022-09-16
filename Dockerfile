@@ -3,6 +3,9 @@ FROM alpine:3.16
 RUN apk update
 RUN apk add neovim curl git zsh fzf the_silver_searcher bat
 
+RUN apk add --update nodejs yarn
+RUN yarn global add prettier
+
 RUN mkdir -p ~/.config/nvim
 ADD nvim/init.vim /root/.config/nvim/init.vim
 

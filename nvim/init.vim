@@ -12,8 +12,11 @@ call plug#begin()
   " commenter https://github.com/tpope/vim-commentary
   Plug 'tpope/vim-commentary'
 
-  " CtrlP https://github.com/kien/ctrlp.vim 
+  " CtrlP https://github.com/kien/ctrlp.vim
   Plug 'kien/ctrlp.vim'
+
+  " prettier https://github.com/prettier/vim-prettier
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 call plug#end()
 
