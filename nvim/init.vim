@@ -8,6 +8,10 @@ call plug#begin()
   " fzf https://github.com/junegunn/fzf.vim
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+
+  " commenter https://github.com/tpope/vim-commentary
+  Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 " CONFIGURATION
