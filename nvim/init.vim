@@ -18,6 +18,13 @@ call plug#begin()
   " prettier https://github.com/prettier/vim-prettier
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
+  " syntax highlighter
+  Plug 'pangloss/vim-javascript'
+  Plug 'maxmellon/vim-jsx-pretty'
+
+  " emmet 
+  Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 " CONFIGURATION
