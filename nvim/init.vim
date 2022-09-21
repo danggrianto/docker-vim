@@ -15,6 +15,10 @@ call plug#begin()
   " CtrlP https://github.com/kien/ctrlp.vim 
   Plug 'kien/ctrlp.vim'
 
+  " airline - statusbar in vim
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
   " Jenkinsfile - groovy
   Plug 'martinda/Jenkinsfile-vim-syntax'
 
