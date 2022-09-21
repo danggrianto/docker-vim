@@ -5,6 +5,7 @@ RUN apk add neovim curl git zsh fzf the_silver_searcher bat
 
 RUN mkdir -p ~/.config/nvim
 ADD nvim/init.vim /root/.config/nvim/init.vim
+ADD colors/ /root/.config/nvim/colors
 
 # install plugin
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

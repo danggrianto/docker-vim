@@ -15,6 +15,9 @@ call plug#begin()
   " CtrlP https://github.com/kien/ctrlp.vim 
   Plug 'kien/ctrlp.vim'
 
+  " Jenkinsfile - groovy
+  Plug 'martinda/Jenkinsfile-vim-syntax'
+
 call plug#end()
 
 " CONFIGURATION
