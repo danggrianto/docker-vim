@@ -19,6 +19,20 @@ call plug#begin()
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
+  " Indentline
+  Plug 'yggdroot/indentline'
+
+  " Git
+  " gitgutter
+  Plug 'airblade/vim-gitgutter'
+  "fugitive
+  Plug 'tpope/vim-fugitive'
+
+  "" LANGUAGE SPECIFIC
+
+  " markdown
+  Plug 'plasticboy/vim-markdown'
+
   " Jenkinsfile - groovy
   Plug 'martinda/Jenkinsfile-vim-syntax'
   " prettier https://github.com/prettier/vim-prettier
@@ -37,6 +51,9 @@ call plug#end()
 " Common
 filetype plugin indent on    	" required
 
+" map leader
+let mapleader = ','
+
 " turn on line numbering
 set number
 " set line numbers to 4 spaces
@@ -50,7 +67,6 @@ syntax on
 " open every file you open in a vertical split on the right side
 set splitright
 
-
 " Nerd Tree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
@@ -63,3 +79,13 @@ colorscheme spacecamp
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Indentation
+set autoindent expandtab tabstop=2 shiftwidth=2
+
+" Filetype
+autocmd BufRead,BufNewFile Jenkinsfile set filetype=groovy
+
+" Markdown syntax
+let g:vim_markdown_folding_disabled = 1
+
