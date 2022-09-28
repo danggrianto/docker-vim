@@ -35,9 +35,11 @@ call plug#begin()
 
   " Jenkinsfile - groovy
   Plug 'martinda/Jenkinsfile-vim-syntax'
+
   " prettier https://github.com/prettier/vim-prettier
   Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
+  " Javascript
   " syntax highlighter
   Plug 'pangloss/vim-javascript'
   Plug 'maxmellon/vim-jsx-pretty'
