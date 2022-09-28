@@ -81,6 +81,10 @@ colorscheme spacecamp
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
 
 " Indentation
 set autoindent expandtab tabstop=2 shiftwidth=2
@@ -90,4 +94,16 @@ autocmd BufRead,BufNewFile Jenkinsfile set filetype=groovy
 
 " Markdown syntax
 let g:vim_markdown_folding_disabled = 1
+
+" YAML
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Autoformat JSX
+autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql Prettier
+
+" Remap key
+map <C-Down> <C-w>j
+map <C-Up> <C-w>k
+map <C-Left> <C-w>h
+map <C-Right> <C-w>l
 
