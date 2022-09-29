@@ -40,6 +40,9 @@ call plug#begin()
   " ALE
   Plug 'dense-analysis/ale'
 
+  " floaterm
+  Plug 'voldikss/vim-floaterm'
+
   "" LANGUAGE SPECIFIC
 
   " markdown
@@ -107,6 +110,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+nnoremap <leader>r :CtrlPClearCache <CR>
 
 " Emmet
 let g:user_emmet_settings = {
@@ -115,6 +119,10 @@ let g:user_emmet_settings = {
     \  },
   \}
 let g:user_emmet_leader_key=','
+
+" floaterm
+let g:floaterm_autoclose = 1
+nnoremap <leader>f :FloatermToggle <CR>
 
 " Indentation
 set autoindent expandtab tabstop=2 shiftwidth=2
