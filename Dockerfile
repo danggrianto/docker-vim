@@ -7,7 +7,7 @@ RUN apk add --update nodejs yarn
 RUN apk add --update python3 py3-pip py3-greenlet 
 RUN pip3 install pynvim
 RUN apk add neovim
-RUN yarn global add prettier
+RUN yarn global add prettier eslint vim-language-server
 
 RUN mkdir -p ~/.config/nvim
 ADD nvim/init.vim /root/.config/nvim/init.vim

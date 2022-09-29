@@ -37,6 +37,9 @@ call plug#begin()
     Plug 'roxma/vim-hug-neovim-rpc'
   endif
 
+  " ALE
+  Plug 'dense-analysis/ale'
+
   "" LANGUAGE SPECIFIC
 
   " markdown
@@ -87,6 +90,13 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " deoplete
 let g:deoplete#enable_at_startup = 1
 
+" ALE
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier', 'eslint'],
+\}
+let g:ale_completion_enabled = 1
+
 " Spacecamp
 colorscheme spacecamp
 
@@ -97,6 +107,14 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+
+" Emmet
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
+let g:user_emmet_leader_key=','
 
 " Indentation
 set autoindent expandtab tabstop=2 shiftwidth=2
@@ -119,4 +137,10 @@ map <C-Down> <C-w>j
 map <C-Up> <C-w>k
 map <C-Left> <C-w>h
 map <C-Right> <C-w>l
+
+" Save with  Ctrl s
+nmap <c-s> :w<cr>
+imap <c-s> <esc>:w<cr>a
+nmap <c-q> :q<cr>
+imap <c-q> <esc>:q<cr>a
 
