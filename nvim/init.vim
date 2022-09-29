@@ -94,6 +94,7 @@ autocmd BufRead,BufNewFile Jenkinsfile set filetype=groovy
 
 " Markdown syntax
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal_code_blocks = 0
 
 " YAML
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
