@@ -27,3 +27,4 @@ alias v='docker run --rm -it -v ${PWD}:/app danggrianto/docker-vim'
 - `,hp` or `leader + hp` show changes
 - `:Gdiff` show changes
 - from `:Gdiff` window: `:diffput` to change/revert line
+

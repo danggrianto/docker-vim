@@ -1,9 +1,12 @@
 FROM alpine:3.16
 
 RUN apk update
-RUN apk add neovim curl git zsh fzf the_silver_searcher bat
+RUN apk add curl git zsh fzf the_silver_searcher bat
 
 RUN apk add --update nodejs yarn
+RUN apk add --update python3 py3-pip py3-greenlet 
+RUN pip3 install pynvim
+RUN apk add neovim
 RUN yarn global add prettier
 
 RUN mkdir -p ~/.config/nvim
@@ -16,11 +19,9 @@ RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/p
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 RUN nvim --headless +PlugInstall +qall
+RUN nvim --headless +UpdateRemotePlugins +qall
 
 ENV TERM=screen-256color
-
-# Install oh-my-zsh
-# RUN sh -c '$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'
 
 WORKDIR /app
 

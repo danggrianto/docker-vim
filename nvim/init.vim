@@ -28,6 +28,15 @@ call plug#begin()
   "fugitive
   Plug 'tpope/vim-fugitive'
 
+  " Deoplete
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+
   "" LANGUAGE SPECIFIC
 
   " markdown
@@ -74,6 +83,9 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 " Spacecamp
 colorscheme spacecamp
