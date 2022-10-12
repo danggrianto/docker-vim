@@ -22,6 +22,9 @@ call plug#begin()
   " Indentline
   Plug 'yggdroot/indentline'
 
+  " ack
+  Plug 'mileszs/ack.vim'
+
   " Git
   " gitgutter
   Plug 'airblade/vim-gitgutter'
