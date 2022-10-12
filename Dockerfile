@@ -1,5 +1,7 @@
 FROM alpine:3.16
 
+ARG USER_ID
+
 RUN apk update
 RUN apk add curl git zsh fzf the_silver_searcher bat
 
@@ -9,10 +11,13 @@ RUN pip3 install pynvim
 RUN apk add neovim
 RUN yarn global add prettier eslint vim-language-server
 
-RUN mkdir -p ~/.config/nvim
-ADD nvim/init.vim /root/.config/nvim/init.vim
-ADD colors/ /root/.config/nvim/colors
-ADD .gitconfig /root/.gitconfig
+RUN adduser -D $USER_ID
+USER $USER_ID
+
+RUN mkdir -p /home/$USER_ID/.config/nvim
+ADD ./nvim/init.vim /home/$USER_ID/.config/nvim/init.vim
+ADD ./colors/ /home/$USER_ID/.config/nvim/colors
+ADD .gitconfig /home/$USER_ID/.gitconfig
 
 # install plugin
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

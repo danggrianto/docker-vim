@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t danggrianto/docker-vim:latest .
+docker build --build-arg USER_ID=`whoami` -t danggrianto/docker-vim:latest .
