@@ -11,13 +11,13 @@ docker build -t danggrianto/docker-vim .
 ## Running
 
 ```
-docker run --rm -it -v `pwd`:/app danggrianto/docker-vim <filename>
+docker run --rm -it -u `whoami` -v `pwd`:/app danggrianto/docker-vim
 ```
 
 ## Alias
 
 ```
-alias v='docker run --rm -it -v ${PWD}:/app danggrianto/docker-vim'
+alias v='docker run --rm -it -u `whoami` -v `pwd`:/app danggrianto/docker-vim '
 ```
 
 # Tips
