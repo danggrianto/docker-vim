@@ -5,7 +5,7 @@ Vim (neovim) in container
 ## Building
 
 ```
-docker build -t danggrianto/docker-vim .
+./build.sh
 ```
 
 ## Running
