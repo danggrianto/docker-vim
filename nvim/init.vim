@@ -22,6 +22,9 @@ call plug#begin()
   " Indentline
   Plug 'yggdroot/indentline'
 
+  " show marks
+  Plug 'kshenoy/vim-signature'
+
   " ack
   Plug 'mileszs/ack.vim'
 
@@ -30,6 +33,7 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
   "fugitive
   Plug 'tpope/vim-fugitive'
+
 
   " Deoplete
   if has('nvim')
