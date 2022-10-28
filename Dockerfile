@@ -3,7 +3,7 @@ FROM alpine:3.16
 ARG USER_ID
 
 RUN apk update
-RUN apk add curl git zsh fzf the_silver_searcher bat
+RUN apk add curl git zsh fzf the_silver_searcher bat ctags
 
 RUN apk add --update nodejs yarn
 RUN apk add --update python3 py3-pip py3-greenlet 

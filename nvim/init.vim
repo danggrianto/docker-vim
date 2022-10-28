@@ -28,6 +28,9 @@ call plug#begin()
   " ack
   Plug 'mileszs/ack.vim'
 
+  " tagbar
+  Plug 'majutsushi/tagbar'
+
   " Git
   " gitgutter
   Plug 'airblade/vim-gitgutter'
@@ -159,3 +162,5 @@ imap <c-s> <esc>:w<cr>a
 nmap <c-q> :q<cr>
 imap <c-q> <esc>:q<cr>a
 
+" tagbar
+nnoremap <leader>t :TagbarToggle <CR>
