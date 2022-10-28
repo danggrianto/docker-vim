@@ -114,7 +114,7 @@ let g:ale_completion_enabled = 1
 colorscheme spacecamp
 
 " CtrlP
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<c-t>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
