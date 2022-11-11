@@ -104,9 +104,11 @@ nnoremap <C-f> :NERDTreeFind<CR>
 let g:deoplete#enable_at_startup = 1
 
 " ALE
+let g:ale_linters = {'python': ['pylint']}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'eslint'],
+\   'python': ['black'],
 \}
 let g:ale_completion_enabled = 1
 

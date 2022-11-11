@@ -7,7 +7,7 @@ RUN apk add curl git zsh fzf the_silver_searcher bat ctags
 
 RUN apk add --update nodejs yarn
 RUN apk add --update python3 py3-pip py3-greenlet 
-RUN pip3 install pynvim
+RUN pip3 install pynvim black pylint
 RUN apk add neovim
 RUN yarn global add prettier eslint vim-language-server
 
