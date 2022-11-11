@@ -22,9 +22,19 @@ alias v='docker run --rm -it -u `whoami` -v `pwd`:/app danggrianto/docker-vim '
 
 # Tips
 
-## Git
+## shortcut
 
-- `,hp` or `leader + hp` show changes
+- `,` leader key
+- `,f` FloatTerm Show
+- `,n` ALE Next error
+- `,x` ALE Fix
+- `,t` Tagbar Toggle
+- `<C-t>` CtrlP fuzzy search
+- `<C-n>` NERDTree toggle
+- `<C-f>` NERDTree find
+- `<C-s>` Save
+- `<C-q>` Quit
+- `,hp`  show changes
 - `:Gdiff` show changes
 - from `:Gdiff` window: `:diffput` to change/revert line
 

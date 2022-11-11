@@ -95,9 +95,7 @@ syntax on
 set splitright
 
 " Nerd Tree
-nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 " deoplete
@@ -111,6 +109,7 @@ let g:ale_fixers = {
 \   'python': ['black'],
 \}
 let g:ale_completion_enabled = 1
+nnoremap <leader>n :ALENext<CR>
 
 " Spacecamp
 colorscheme spacecamp
