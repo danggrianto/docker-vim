@@ -18,6 +18,7 @@ RUN mkdir -p /home/$USER_ID/.config/nvim
 ADD ./nvim/init.vim /home/$USER_ID/.config/nvim/init.vim
 ADD ./colors/ /home/$USER_ID/.config/nvim/colors
 ADD .gitconfig /home/$USER_ID/.gitconfig
+ADD ./snippets/ /home/$USER_ID/.vim/snippets
 
 # install plugin
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

@@ -53,6 +53,12 @@ call plug#begin()
   " floaterm
   Plug 'voldikss/vim-floaterm'
 
+  " snippet engine
+  Plug 'SirVer/ultisnips'
+
+  " Snippets 
+  Plug 'honza/vim-snippets'
+
   "" LANGUAGE SPECIFIC
 
   " markdown
@@ -109,7 +115,7 @@ let g:ale_fixers = {
 \   'python': ['black'],
 \}
 let g:ale_completion_enabled = 1
-nnoremap <leader>n :ALENext<CR>
+nnoremap <leader>n :ALENextWrap<CR>
 
 " Spacecamp
 colorscheme spacecamp
@@ -165,3 +171,8 @@ imap <c-q> <esc>:q<cr>a
 
 " tagbar
 nnoremap <leader>t :TagbarToggle <CR>
+
+" Ultisnip
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/snippets']

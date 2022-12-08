@@ -38,3 +38,6 @@ alias v='docker run --rm -it -u `whoami` -v `pwd`:/app danggrianto/docker-vim '
 - `:Gdiff` show changes
 - from `:Gdiff` window: `:diffput` to change/revert line
 
+## Adding snippet
+
+edit `*.snippets` file in `snippets` directory
