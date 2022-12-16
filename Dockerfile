@@ -3,7 +3,7 @@ FROM alpine:3.16
 ARG USER_ID
 
 RUN apk update
-RUN apk add curl git zsh fzf the_silver_searcher bat ctags
+RUN apk add openssh curl git zsh fzf the_silver_searcher bat ctags
 
 RUN apk add --update nodejs yarn
 RUN apk add --update python3 py3-pip py3-greenlet 
@@ -19,6 +19,9 @@ ADD ./nvim/init.vim /home/$USER_ID/.config/nvim/init.vim
 ADD ./colors/ /home/$USER_ID/.config/nvim/colors
 ADD .gitconfig /home/$USER_ID/.gitconfig
 ADD ./snippets/ /home/$USER_ID/.vim/snippets
+
+# copy hosts.json
+ADD ./hosts.json /home/$USER_ID/.config/github-copilot/hosts.json
 
 # install plugin
 RUN sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

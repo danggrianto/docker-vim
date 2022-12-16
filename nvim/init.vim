@@ -78,6 +78,9 @@ call plug#begin()
   " emmet 
   Plug 'mattn/emmet-vim'
 
+  " copilot
+  Plug 'github/copilot.vim'
+
 call plug#end()
 
 " CONFIGURATION
