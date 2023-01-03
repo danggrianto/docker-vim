@@ -103,9 +103,6 @@ syntax on
 " open every file you open in a vertical split on the right side
 set splitright
 
-" Nerd Tree
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
@@ -161,10 +158,14 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql Prettier
 
 " Remap key
-map <C-Down> <C-w>j
-map <C-Up> <C-w>k
+nnoremap <C-Down> 20<Down>
+map <C-Up> <C-b>
 map <C-Left> <C-w>h
 map <C-Right> <C-w>l
+
+" Nerd Tree
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 " Save with  Ctrl s
 nmap <c-s> :w<cr>
@@ -179,3 +180,4 @@ nnoremap <leader>t :TagbarToggle <CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/snippets']
+

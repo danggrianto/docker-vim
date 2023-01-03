@@ -9,7 +9,7 @@ RUN apk add --update nodejs yarn
 RUN apk add --update python3 py3-pip py3-greenlet 
 RUN pip3 install pynvim black pylint
 RUN apk add neovim
-RUN yarn global add prettier eslint vim-language-server
+RUN yarn global add prettier eslint vim-language-server jsctags
 
 RUN adduser -D $USER_ID
 USER $USER_ID
